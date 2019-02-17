@@ -1,86 +1,99 @@
-<div id = "PL">
-    <table style="width:100%">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Probabilidade Campeão</th>
-                <th>Probabilidade Chanpions</th>
-                <th>Probabilidade Europa League</th>
-                <th>Probabilidade Nenhuma Ação</th>
-                <th>Probabilidade Rebaixamento</th>
-            </tr>
-        </thead>
+{% load static %}
+<body>
+    <select id="liga" style="width: 1000px; margin-bottom: 50px; margin-top: 50px; ">
+        <option value="PL">Premiere League</option>
+        <option value="SA">Serie A Tim</option>
+        <option value="PD">La Liga</option>
+    </select>
 
-        <tbody>
+    <div id = "PL" class = "t_liga">
+        <table style="width:100%">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Probabilidade Campeão</th>
+                    <th>Probabilidade Chanpions</th>
+                    <th>Probabilidade Europa League</th>
+                    <th>Probabilidade Nenhuma Ação</th>
+                    <th>Probabilidade Rebaixamento</th>
+                </tr>
+            </thead>
 
-        {% for tabela in saida_PL %}
-            <tr>
-                <td>{{ tabela.time }}</td>
-                <td>{{ tabela.c }} %</td>
-                <td>{{ tabela.cl }} %</td>
-                <td>{{ tabela.el }} %</td>
-                <td>{{ tabela.p }} %</td>
-                <td>{{ tabela.r }} %</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div>
+            <tbody>
 
-<div id = "PD">
-    <table style="width:100%">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Probabilidade Campeão</th>
-                <th>Probabilidade Chanpions</th>
-                <th>Probabilidade Europa League</th>
-                <th>Probabilidade Nenhuma Ação</th>
-                <th>Probabilidade Rebaixamento</th>
-            </tr>
-        </thead>
+            {% for tabela in saida_PL %}
+                <tr>
+                    <td>{{ tabela.time }}</td>
+                    <td>{{ tabela.c }} %</td>
+                    <td>{{ tabela.cl }} %</td>
+                    <td>{{ tabela.el }} %</td>
+                    <td>{{ tabela.p }} %</td>
+                    <td>{{ tabela.r }} %</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
-        <tbody>
+    <div id = "PD" class = "t_liga" style="display: none;">
+        <table style="width:100%">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Probabilidade Campeão</th>
+                    <th>Probabilidade Chanpions</th>
+                    <th>Probabilidade Europa League</th>
+                    <th>Probabilidade Nenhuma Ação</th>
+                    <th>Probabilidade Rebaixamento</th>
+                </tr>
+            </thead>
 
-        {% for tabela in saida_PD %}
-            <tr>
-                <td>{{ tabela.time }}</td>
-                <td>{{ tabela.c }} %</td>
-                <td>{{ tabela.cl }} %</td>
-                <td>{{ tabela.el }} %</td>
-                <td>{{ tabela.p }} %</td>
-                <td>{{ tabela.r }} %</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div>
+            <tbody>
 
-<div id = "SA">
-    <table style="width:100%">
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Probabilidade Campeão</th>
-                <th>Probabilidade Chanpions</th>
-                <th>Probabilidade Europa League</th>
-                <th>Probabilidade Nenhuma Ação</th>
-                <th>Probabilidade Rebaixamento</th>
-            </tr>
-        </thead>
+            {% for tabela in saida_PD %}
+                <tr>
+                    <td>{{ tabela.time }}</td>
+                    <td>{{ tabela.c }} %</td>
+                    <td>{{ tabela.cl }} %</td>
+                    <td>{{ tabela.el }} %</td>
+                    <td>{{ tabela.p }} %</td>
+                    <td>{{ tabela.r }} %</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
-        <tbody>
+    <div id = "SA" class = "t_liga" style="display: none;">
+        <table style="width:100%">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Probabilidade Campeão</th>
+                    <th>Probabilidade Chanpions</th>
+                    <th>Probabilidade Europa League</th>
+                    <th>Probabilidade Nenhuma Ação</th>
+                    <th>Probabilidade Rebaixamento</th>
+                </tr>
+            </thead>
 
-        {% for tabela in saida_SA %}
-            <tr>
-                <td>{{ tabela.time }}</td>
-                <td>{{ tabela.c }} %</td>
-                <td>{{ tabela.cl }} %</td>
-                <td>{{ tabela.el }} %</td>
-                <td>{{ tabela.p }} %</td>
-                <td>{{ tabela.r }} %</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div>
+            <tbody>
+
+            {% for tabela in saida_SA %}
+                <tr>
+                    <td>{{ tabela.time }}</td>
+                    <td>{{ tabela.c }} %</td>
+                    <td>{{ tabela.cl }} %</td>
+                    <td>{{ tabela.el }} %</td>
+                    <td>{{ tabela.p }} %</td>
+                    <td>{{ tabela.r }} %</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="{%  static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/seletor_liga.js' %}"></script>
+
+</body>
