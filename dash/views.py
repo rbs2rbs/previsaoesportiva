@@ -2,7 +2,6 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 import sqlalchemy
 import json
-import pandas as pd
 from credenciais import *
 
 def dash(request):
