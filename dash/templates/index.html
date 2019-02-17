@@ -1,0 +1,86 @@
+<div id = "PL">
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Probabilidade Campeão</th>
+                <th>Probabilidade Chanpions</th>
+                <th>Probabilidade Europa League</th>
+                <th>Probabilidade Nenhuma Ação</th>
+                <th>Probabilidade Rebaixamento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for tabela in saida_PL %}
+            <tr>
+                <td>{{ tabela.time }}</td>
+                <td>{{ tabela.c }} %</td>
+                <td>{{ tabela.cl }} %</td>
+                <td>{{ tabela.el }} %</td>
+                <td>{{ tabela.p }} %</td>
+                <td>{{ tabela.r }} %</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div id = "PD">
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Probabilidade Campeão</th>
+                <th>Probabilidade Chanpions</th>
+                <th>Probabilidade Europa League</th>
+                <th>Probabilidade Nenhuma Ação</th>
+                <th>Probabilidade Rebaixamento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for tabela in saida_PD %}
+            <tr>
+                <td>{{ tabela.time }}</td>
+                <td>{{ tabela.c }} %</td>
+                <td>{{ tabela.cl }} %</td>
+                <td>{{ tabela.el }} %</td>
+                <td>{{ tabela.p }} %</td>
+                <td>{{ tabela.r }} %</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div id = "SA">
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Probabilidade Campeão</th>
+                <th>Probabilidade Chanpions</th>
+                <th>Probabilidade Europa League</th>
+                <th>Probabilidade Nenhuma Ação</th>
+                <th>Probabilidade Rebaixamento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for tabela in saida_SA %}
+            <tr>
+                <td>{{ tabela.time }}</td>
+                <td>{{ tabela.c }} %</td>
+                <td>{{ tabela.cl }} %</td>
+                <td>{{ tabela.el }} %</td>
+                <td>{{ tabela.p }} %</td>
+                <td>{{ tabela.r }} %</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
